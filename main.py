@@ -7,6 +7,17 @@ def main():
     is_teacher = True
     my_grade = 99.99
     
+    print("age is: ", type(age), "teacher is a ", type(teacher), "is_teacher ", type(is_teacher), "my grade is a ", type(my_grade))
 
+    #string formating with f-string
+    print(f"The type of the variable is: {type(age)}")
+
+    x = 42
+    y = 3/4
+    z = int('7')
+    a = float(5)
+    name = "Nina"
+    print(type(x), type(y), type(z), type(a), type(name))
+    print("my age in 10 years: ", (age + 10))
 if __name__ == "__main__":
     main()
