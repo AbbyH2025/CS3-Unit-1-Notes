@@ -19,5 +19,16 @@ def main():
     name = "Nina"
     print(type(x), type(y), type(z), type(a), type(name))
     print("my age in 10 years: ", (age + 10))
+
+def bake_cookie(ingredients, tempature, instructions, tools):
+    #print the list of ingredients 
+
+    #print the oven temp 
+
+    #print instructions
+    print(instructions)
+    
+
+
 if __name__ == "__main__":
     main()
