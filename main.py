@@ -19,14 +19,29 @@ def main():
     name = "Nina"
     print(type(x), type(y), type(z), type(a), type(name))
     print("my age in 10 years: ", (age + 10))
+    
+    #initialize args for function 
+    ingredients_list = ["chocolate chips", "Uranium 231", "arsonic", "asbesdos"]
+    snickerdoodle = "idk"
+    tempature = 300
+    
+    #call a function
+    bake_cookie(ingredients_list, snickerdoodle, tempature)
+    bake_cookie(ingredients_list, snickerdoodle, tempature, cutter = "star")
+    
 
-def bake_cookie(ingredients, tempature, instructions, tools):
+def bake_cookie(ingredients, tempature, instructions, cutter="circle"):
     #print the list of ingredients 
-
+    for item in ingredients:
+        print(item)
     #print the oven temp 
-
+    print(f"set oven temp to {tempature}")
+    print(f"shape is a {cutter}")
     #print instructions
-    print(instructions)
+    print(instructions, end="\n")
+
+
+    
     
 
 
