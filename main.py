@@ -26,8 +26,19 @@ def main():
     tempature = 300
     
     #call a function
-    bake_cookie(ingredients_list, snickerdoodle, tempature)
-    bake_cookie(ingredients_list, snickerdoodle, tempature, cutter = "star")
+    #bake_cookie(ingredients_list, snickerdoodle, tempature)
+    #bake_cookie(ingredients_list, snickerdoodle, tempature, cutter = "star")
+
+    print("we doing math now")
+    print(calculate_numbers(2, 3))
+    print(calculate_numbers(2, 3, "multiply"))
+    print(calculate_numbers(2, 3, operation="subtract"))
+
+    #demonstate modifying values while iterating 
+    #note that you can mix data types in the same list
+    numbers = [5, 6, 929, 85, 99, 2, "hi"]
+    list_iteration(numbers)
+
     
 
 def bake_cookie(ingredients, tempature, instructions, cutter="circle"):
@@ -40,9 +51,30 @@ def bake_cookie(ingredients, tempature, instructions, cutter="circle"):
     #print instructions
     print(instructions, end="\n")
 
+def calculate_numbers(x, y, operation="add"):
+    if operation == "add":
+        return x + y
+    elif operation == "subtract":
+        return x - y 
+    elif operation == "multiply":
+        return x * y
+    elif operation == "divide": 
+        return x / y
+    
+def list_iteration(inputList):
+    #dif ways to modify values while idderating 
+    #1. create a new list as you loope 
+    print("this is the first method")
+    new_List = []
+    for item in inputList: 
+            new_List.append(item*2)
+    print(new_List)
 
-    
-    
+    #2. list comprehension
+    print("this is the second method")
+
+    inputList = [item * 2 for item in inputList]
+    print(inputList) 
 
 
 if __name__ == "__main__":
