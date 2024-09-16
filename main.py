@@ -39,6 +39,38 @@ def main():
     numbers = [5, 6, 929, 85, 99, 2, "hi"]
     list_iteration(numbers)
 
+    #test different container types 
+    listDemo()
+    tupleDemo()
+    setDemo()
+    dictDemo()
+
+def listDemo():
+    print("List demo***")
+    myList = ["f","u","c","k","","y","o","u","","a","b","b","y"]
+    myList.append("!")
+    print(myList)
+    print("this is how many items are in the list", len(myList))
+
+    #using index to access specfic item 
+    print(myList[0])
+    print(myList[12:14]) #item at index 12 is inclusive, 14 is exlcusive
+    print(myList[4:])
+    print(myList[-2:]) #negative index is the same as len(list) minus whatever is inside of the []
+
+    #remove the f 
+    myList.remove("f") #removes the first of this char
+    myList.append(1, "ph")
+    print(myList)
+
+def tupleDemo():
+    print("Tuple Demo***")
+
+def setDemo():
+    print("demo of set ***")
+
+def dictDemo():
+    print("this is a dictionary demo***")
     
 
 def bake_cookie(ingredients, tempature, instructions, cutter="circle"):
