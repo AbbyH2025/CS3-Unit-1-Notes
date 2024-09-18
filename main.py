@@ -47,7 +47,7 @@ def main():
 
 def listDemo():
     print("List demo***")
-    myList = ["f","u","c","k","","y","o","u","","a","b","b","y"]
+    myList = ["f","u","c","k","","y","o","u","","a","b","b","y"] #this is me. I do not like me :(
     myList.append("!")
     print(myList)
     print("this is how many items are in the list", len(myList))
@@ -60,18 +60,61 @@ def listDemo():
 
     #remove the f 
     myList.remove("f") #removes the first of this char
-    myList.append(1, "ph")
+    myList.insert(1, "ph")
+    print(myList)
+    myList.append("我")
+    #use in operator to see if something is in a sequence 
+    print("f" in myList)
+
+    #sort our list in reverse order
+    myList.sort(reverse=True) #reverse alphabetical(unicode) order
     print(myList)
 
 def tupleDemo():
     print("Tuple Demo***")
+    #tuples are immutable 
+    person = ('Courtny', 17, 'Brooklyn, NY')
+    name, age, hometown = person 
+    #created multiple variables in one line
+    print(name)
+    print(age)
+    print(hometown)
 
 def setDemo():
     print("demo of set ***")
+    mySet = set()
+    mySet = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+    print(mySet)
+    #muteable 
+    mySet.add(11)
+    mySet.remove(4)
+    print(mySet)
+    #sets can only contain unique values 
+    mySet.add(8)
+    print(mySet)
+
+    otherSet = {2, 4, 6, 8, 10}
+    print(mySet.union(otherSet))
+    print(mySet.intersection(otherSet))
+    print(mySet.difference(otherSet))
 
 def dictDemo():
     print("this is a dictionary demo***")
-    
+    #crete a dictionary with values
+    #{ key: value, key: value, key: value}
+    costumes = { 
+        "M&M": { "pop %": 0.4, "cost": 40.00, "school ok": True, "items": ["suit", "white tights"]}, 
+        "cat": { "pop %": 0.95, "cost": 9.0, "school ok": "maybe", "items": ['cat ears']},
+        'jorge': { 'school ok': False, 'items': ['clown hammer'] }
+    }
+    print(costumes)
+    print(costumes.items())
+    print(costumes.keys())
+    print(costumes.values())
+
+    #how to access items
+    print(costumes["jorge"])
+    print(costumes.get("cat"))
 
 def bake_cookie(ingredients, tempature, instructions, cutter="circle"):
     #print the list of ingredients 
