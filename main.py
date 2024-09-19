@@ -62,7 +62,7 @@ def listDemo():
     myList.remove("f") #removes the first of this char
     myList.insert(1, "ph")
     print(myList)
-    myList.append("我")
+    myList.append("")
     #use in operator to see if something is in a sequence 
     print("f" in myList)
 
@@ -115,6 +115,16 @@ def dictDemo():
     #how to access items
     print(costumes["jorge"])
     print(costumes.get("cat"))
+    print("Mr. Titcomb" in costumes)
+
+    #how to add items
+    costumes["Mr. Titcomb"] = {"pop %": 1, 'school OK': True}
+
+    #iterate through dictionary items 
+    for costume in costumes: 
+        print(costumes)
+        print(costumes[costume])
+        
 
 def bake_cookie(ingredients, tempature, instructions, cutter="circle"):
     #print the list of ingredients 
