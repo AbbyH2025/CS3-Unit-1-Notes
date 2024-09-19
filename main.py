@@ -57,7 +57,7 @@ def listDemo():
     print(myList[12:14]) #item at index 12 is inclusive, 14 is exlcusive
     print(myList[4:])
     print(myList[-2:]) #negative index is the same as len(list) minus whatever is inside of the []
-
+#
     #remove the f 
     myList.remove("f") #removes the first of this char
     myList.insert(1, "ph")
